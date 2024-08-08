@@ -19,9 +19,11 @@ CREATE TABLE documento (
     documentoid INT IDENTITY(1,1) PRIMARY KEY,
     caminhodocumento VARCHAR(MAX),
     documentonome VARCHAR(100),
+
     idusuario INT,
     CONSTRAINT fk_usuario_documento FOREIGN KEY (idusuario) REFERENCES usuario(idusuario)
 );
+
 
 
 CREATE TABLE palavra_chave (
@@ -52,5 +54,4 @@ CREATE TABLE palavra_chave_localizacao (
     CONSTRAINT fk_palavra_chave_localizacao FOREIGN KEY (id_palavra_chave) REFERENCES palavra_chave(id_palavra_chave),
     CONSTRAINT fk_localizacao FOREIGN KEY (id_localizacao) REFERENCES localizacao(id_localizacao)
 );
-
 
