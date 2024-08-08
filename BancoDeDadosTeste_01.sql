@@ -19,12 +19,12 @@ CREATE TABLE documento (
     documentoid INT IDENTITY(1,1) PRIMARY KEY,
     caminhodocumento VARCHAR(MAX),
     documentonome VARCHAR(100),
-
+	FileData VARBINARY(MAX),
     idusuario INT,
     CONSTRAINT fk_usuario_documento FOREIGN KEY (idusuario) REFERENCES usuario(idusuario)
 );
 
-
+a 
 
 CREATE TABLE palavra_chave (
     id_palavra_chave INT IDENTITY(1,1) PRIMARY KEY,
