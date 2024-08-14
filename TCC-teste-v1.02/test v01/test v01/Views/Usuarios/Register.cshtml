@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model test_v01.Repository.Models.Usuario
+
+<h2>Cadastro</h2>
+
+<form asp-action="Register" method="post">
+    <div class="form-group">
+        <label asp-for="Nomeusuario"></label>
+        <input asp-for="Nomeusuario" class="form-control" />
+        <span asp-validation-for="Nomeusuario" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Emailusuario"></label>
+        <input asp-for="Emailusuario" class="form-control" />
+        <span asp-validation-for="Emailusuario" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Senhausuario"></label>
+        <input asp-for="Senhausuario" type="password" class="form-control" />
+        <span asp-validation-for="Senhausuario" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Recmail"></label>
+        <input asp-for="Recmail" class="form-control" />
+        <span asp-validation-for="Recmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Telefoneusuario"></label>
+        <input asp-for="Telefoneusuario" class="form-control" />
+        <span asp-validation-for="Telefoneusuario" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+<a asp-controller="Usuarios" asp-action="Register">Cadastre-se</a>
+<a asp-controller="Usuarios" asp-action="Logout">Logout</a>
