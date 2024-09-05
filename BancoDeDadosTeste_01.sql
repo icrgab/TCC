@@ -11,7 +11,8 @@ CREATE TABLE usuario (
     senhausuario VARCHAR(40),
     recmail VARCHAR(50), 
     nomeusuario VARCHAR(100),
-    telefoneusuario VARCHAR(15)
+    telefoneusuario VARCHAR(15),
+    IsAdmin BIT DEFAULT 0
 );
 
 
